@@ -70,7 +70,7 @@ Demo Output:<br>
 [1010]Assoicate[1]: no fisherman is in the queue<br>
 [1016]Ranger: no fisherman comes to fish<br>
 [1510]Assoicate[0]: no fisherman is in the queue<br>
-......
+......<br>
 [2516]Assoicate[0]: no fisherman is in the queue<br>
 [2530]Ranger: no fisherman comes to fish<br>
 [3009]Fisherman[0]: is walking into the shop<br>
@@ -108,30 +108,30 @@ Demo Output:<br>
 [3535]Ranger: no fisherman comes to fish<br>
 [3536]Fisherman[2]: sleep interrupted<br>
 [3536]Fisherman[2]: starts fishing<br>
-.....
+.....<br>
 [39791]Fisherman[5]: cashed out 50 pounds fish for $37.5<br>
 [39791]Fisherman[5]: is leaving the shop<br>
 [39791]Fisherman[0]: is standing into the queue<br>
 [39791]Fisherman[5]: joins to Fisherman[4]<br>
-.....
+.....<br>
 [51849]Fisherman[4]: cashed out 40 pounds fish for $30.0<br>
 [51849]Fisherman[4]: is leaving the shop<br>
 [51849]Fisherman[4]: joins to Fisherman[3]<br>
-......
+......<br>
 [52856]Fisherman[2]: is walking into the shop<br>
 [52856]Fisherman[3]: cashed out 30 pounds fish for $22.5<br>
 [52856]Fisherman[3]: is leaving the shop<br>
 [52856]Fisherman[2]: is standing into the queue<br>
 [52856]Fisherman[3]: joins to Fisherman[2]<br>
-......
+......<br>
 [53361]Fisherman[2]: cashed out 40 pounds fish for $30.0<br>
 [53361]Fisherman[2]: is leaving the shop<br>
 [53361]Fisherman[2]: joins to Fisherman[1]<br>
-.......
+.......<br>
 [59402]Fisherman[1]: cashed out 40 pounds fish for $30.0<br>
 [59402]Fisherman[1]: is leaving the shop<br>
 [59402]Fisherman[1]: joins to Fisherman[0]<br>
-.......
+.......<br>
 [64437]Assoicate[1]: is serving Fisherman[0]<br>
 [64889]Assoicate[0]: no fisherman is in the queue<br>
 [64923]Fisherman[0]: cashed out 30 pounds fish for $22.5<br>
