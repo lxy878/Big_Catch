@@ -5,18 +5,22 @@ public class Ranger extends Thread {
 	public boolean working = true;
 	public boolean fishhole = false;
 	
+	public ArrayList<Fishman> waitingList = new ArrayList<>();
+	
 	public Ranger(String name){
 		setName(name);
 	}
 	
 	public void run(){
 		while(working){
-			if(!BigCatchManager.isEmpty_waitList()){
+			if(!waitingList.isEmpty()){
 				if(!fishhole){
-					fishhole=true;
+					// lock fish hole
+					fishhole = true;
 					pickFishman();
 				}
 			}else{
+				msg("no fisherman comes to fish");
 				try {
 					sleep(500);
 				} catch (InterruptedException e) {
@@ -24,17 +28,21 @@ public class Ranger extends Thread {
 				}
 			}
 		}
+		msg("is going home");
 	}
 	
 	public void pickFishman(){
-		int num = BigCatchManager.size_waitList();
-		int picked_fm = (new Random()).nextInt(num);
-		Fishman fm = BigCatchManager.getFishman_waitList(picked_fm);
-		if(!fm.isInterrupted()){
-			BigCatchManager.remove_waitList(picked_fm);
-			fm.interrupt();
-		}
+			// pick a fishman
+			int i_fm = (new Random()).nextInt(waitingList.size());
+			Fishman picked_fm = waitingList.get(i_fm);
+			// wake up fishman
+			if(!picked_fm.isInterrupted()){
+				msg("picked "+picked_fm.getName());
+				waitingList.remove(picked_fm);
+				picked_fm.interrupt();
+			}
 	}
+	
 	public void msg (String m) {
 		long current_time = System.currentTimeMillis() - BigCatchManager.time;
 		System.out.println( "[" + current_time + "]"  + getName() + ": "+ m);
