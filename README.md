@@ -16,7 +16,7 @@ Lake Big Fish is known for it’s very large fish. There is a town on the shore 
 
 ### The conditions of ending the program: 
 
-Every **fisheman (num_fm)** will leave once he has at least one “Big Catch” and enough money to pay for his trip, **vacation_cost**.
+Every **fisherman (num_fm)** will leave once he has at least one “Big Catch” and enough money to pay for his trip, **vacation_cost**.
 
 ### Steps: 
 
