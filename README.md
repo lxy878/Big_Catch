@@ -28,7 +28,7 @@ Every **fisheman (num_fm)** will leave once he has at least one “Big Catch” 
 
 ## Simple Flowchart:
 
-<img src='https://github.com/lxy878/Big_Catch/blob/master/flowchart.png' width='400' height='300' alt='cralwer page' />
+<img src='https://github.com/lxy878/Big_Catch/blob/master/flowchart.png' width='450' height='338' alt='flowchart' />
 
 ## Demo Output:
 
