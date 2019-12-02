@@ -1,10 +1,37 @@
 # Project - *Big Catch*
 
-The program is designed to self-write  a story about a number fishermen catching big fish by implementing Java Thread.
+## Overview:
 
-See Project Description.
+The program is designed to self-write a story about a number fishermen catching big fish by implementing Java Thread.
 
-Demo Output:<br>
+## Purpose:
+
+This project is a practice of coding the creation and execution of threads, and with the use of the Thread class methods. In order to synchronize the threads you will have to use (when necessary), run( ), start( ), currentThread( ), getName( ), join( ), yield( ), sleep(time), isAlive( ), getPriority( ), setPriority( ), interrupt( ), isInterrupted( ), synchronized methods.
+
+## Process:
+
+### Background Story:
+
+Lake Big Fish is known for it’s very large fish. There is a town on the shore called Breton. Near Breton is an island called Marrowind with a fishing hole where the large fish often come to feed. This fishing hole has become famous among amateur fishermen who come from all around to fish in the famous fishing hole. There is a shop in Breton that will stuff the prize and mount it for the fishermen so they can come home with proof of their “Big Catches”. The fishermen can also bring in lesser fish for money. And use very small fish for bait.
+
+### The conditions of ending the program: 
+
+Every **fisheman (num_fm)** will leave once he has at least one “Big Catch” and enough money to pay for his trip, **vacation_cost**.
+
+### Steps: 
+
+1. A fisherman that has not achieved his “Big Catch” or not recouped his vacation_cost will travel to the island to get his turn at the fishing hole. Fishermen gather on the island of Morrowind and wait (simulated by sleeping a long time) for the fishing hole to be available. 
+2. The fishing hole is guarded by a Ranger. The ranger randomly interrupts one of the fishermen (use **interrupt()** and **isInterrupted()**). The ranger allows the fishermen access to the fishing hole and allowed one turn to fish. If the fisherman gets no fish, the Ranger allows the fisherman to increase his priority for a very short time and fish one more time. After that time at the fishing hole, the fisherman will immediately reset his priority back to the default value and will allow another fisherman to use the fishing hole (**use yield( )**). 
+3. If the fisherman is successful he will receive a random fish (bait, 10, 20,30,40,50 or 200 pounds fish). If the fisherman does not have at least 10 pounds of fish he must wait for the ranger to give him access to the fishing hole again. When he has a fish big enough (above 10 pounds) to cash or mount in for money he takes a boat to the town and goes to the shop (use **sleep()** to simulate the boat trip). 
+4. When he gets to the shop he sets his variable **needs_help(i)** to true and **busy waits** until a clerk is ready to help him. There are **num_ca**, customer associates but only one line of fishermen. A customer associate should pick the next waiting fisherman in a mutual exclusion fashion (this can be done from inside of a synchronized method) and in the FCFS order. The fisherman gets his mounted fish (above 200 pounds) or his money for the other fish ($0.75 per pound of fish).
+5. If the fisherman achieves his goal of a big fish and vacation_cost. He will go home. However, each fisherman must join the previous fisherman in sequence. For example, in case that fisherman (i+1) is alive, fisherman (i) will join fisherman (i+1) (use **isAlive( )** and **join( )**). The last fisherman to leave for home (fisherman(0) ) will let the Ranger know that it is time for him to terminate. The customer associates will terminate as well.
+
+## Simple Flowchart:
+
+<img src='https://github.com/lxy878/search_engine/blob/master/showcase_img/cralwer.png' width='400' height='200' alt='cralwer page' />
+
+## Demo Output:
+
 [1]Fisherman[0]: waiting for fishing<br>
 [1]Fisherman[1]: waiting for fishing<br>
 [1]Fisherman[2]: waiting for fishing<br>
